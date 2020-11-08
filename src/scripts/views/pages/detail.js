@@ -1,3 +1,7 @@
+import UrlParser from '../../routes/url-parser';
+import TheMovieDbSource from '../../data/themoviedb-source';
+
+
 const Detail = {
     async render() {
         return `
@@ -6,7 +10,9 @@ const Detail = {
     },
 
     async afterRender() {
-        // Fungsi ini akan dipanggil setelah render()
+        const url = UrlParser.parseActiveUrlWithCombiner();
+        const movies = await TheMovieDbSource.detailMovie(url.id);
+        console.log(movies);
     },
 };
 
