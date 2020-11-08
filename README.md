@@ -4,7 +4,7 @@ Dicoding - <a href="https://www.dicoding.com/academies/219"> Front-End Web Devel
 - Application shell components: header, navigation/drawer, main (container), and footer.
 - Inisiasi komponen pembentuk fitur drawer: hamburger button (untuk menampilkan drawer content), drawer content (menampung navigasi), dan main content (untuk menyembunyikan drawer content ketika diklik). 
 - Router sederhana menampilkan page secara dinamis berdasarkan URL. (Fragment Identifier)
-- Menampilkan data yang didapat secara asynchronous melalui Web API (<a href="themoviedb.org">themoviedb.org</a>)
+- Menampilkan data yang didapat secara asynchronous melalui Web API (<a href="https://www.themoviedb.org/?language=en-US"><b>themoviedb API</b></a>)
 - Mengolah data dari API dan menampilkannya pada DOM. 
 
 ### Screenshot 
