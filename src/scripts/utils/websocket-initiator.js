@@ -1,4 +1,6 @@
 // Web Socket untuk menampilkan live feeds dari movie yang sedang tayang.
+import NotificationHelper from './notification-helper';
+import CONFIG from '../globals/config';
 
 const WebSocketInitiator = {
     init(url) {
@@ -7,7 +9,15 @@ const WebSocketInitiator = {
     },
 
     _onMessageHandler(message) {
-        console.log(message.data);
+        // console.log(message.data); //tampilkan di console
+        const movie = JSON.parse(message.data);
+        NotificationHelper.sendNotification({
+            title: `${movie.title} is on cinema!`,
+            options: {
+                body: movie.overview,
+                image: `${CONFIG.BASE_IMAGE_URL + movie.poster_path}`,
+            },
+        });
     },
 };
 
